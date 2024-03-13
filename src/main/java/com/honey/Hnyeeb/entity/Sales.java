@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
+@Table(name = "sales_master")
 @Data
-@Table(name = "purchase_master")
-public class Purchase {
+public class Sales {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +35,6 @@ public class Purchase {
     @Column(nullable = false)
     private String mrp;
 
-
     @Column(nullable = false)
     private String notes;
 
@@ -42,13 +42,9 @@ public class Purchase {
     private String totalPrice;
 
     @Column(nullable = false)
-    private String vendor;
-
-    @Column(nullable = false)
     private String createdBy;
 
     @Column(nullable = false)
     private String createdAt;
-
 
 }
